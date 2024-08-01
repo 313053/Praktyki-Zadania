@@ -1,0 +1,8 @@
+
+services:
+  ruby:
+    build:
+      context: . 
+    volumes: 
+    - ./volume1:/home/hosting/volume1
+    tty: true
