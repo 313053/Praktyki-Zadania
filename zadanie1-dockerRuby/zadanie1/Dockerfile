@@ -50,5 +50,5 @@ RUN curl -sSL https://rvm.io/mpapis.asc | gpg --import - && \
 RUN mkdir -p /home/hosting/volume1
 
 
-# Set default command to bash
+# Domyślna komenda to bash
 CMD ["bash", "-l"]
