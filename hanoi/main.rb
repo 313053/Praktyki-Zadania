@@ -1,17 +1,23 @@
 require_relative 'lib/hanoi'
 
+# Klasa aplikacji 
 class MainApp
+  # Metoda rozpoczynająca działanie programu. 
+  # Wykorzystuje liczbę całkowitą n pobraną w argumencie programu lub z konsoli
+  #
+  # @return [void]
   def run
-    n = ARGV.empty? ? getData : getArgument
+    n = ARGV.empty? ? get_data : get_argument
     hanoi = Hanoi.new(n)
     hanoi.solve
   end
 
   # Metoda pomocnicza do pobierania rozmiaru wieży z konsoli. 
   # Jeśli nie da się przekonwertować getsa na int to ponownie drukuje prośbę
-  private
-  def getData
-    puts "Podaj rozmiar wieży (UWAGA: od 7 w górę ucina wizualizacje pierwszych kroków)"
+  #
+  # @return [Integer] n - ilość klocków na wieży 
+  def get_data
+    puts "Podaj rozmiar wieży (UWAGA: od 13 w górę proces znacznie się wydłuża)"
     loop do
       input = gets.chomp
       begin
@@ -29,7 +35,9 @@ class MainApp
 
   # Metoda pomocnicza do pobierania rozmiaru wieży z argumentu skryptu
   # Jeśli nie da się przekonwertować ARGV[0] na int to kończy program
-  def getArgument
+  #
+  # @return [Integer] n - ilość klocków na wieży 
+  def get_argument
     arg = ARGV[0]
 
     begin

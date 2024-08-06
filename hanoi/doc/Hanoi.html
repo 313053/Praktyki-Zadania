@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Hanoi
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Hanoi";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (H)</a> &raquo;
+    
+    
+    <span class="title">Hanoi</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Hanoi
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Hanoi</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/hanoi.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>klasa odpowiadająca za funkcjonalność wieży hanoi</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(n)  &#x21d2; Hanoi </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Konstruktor pobierający od użytkownika n i na podstawie tego tworzący warunki początkowe problemu.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#move_disk-instance_method" title="#move_disk (instance method)">#<strong>move_disk</strong>(from, to)  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Funkcja wykonująca przenoszenie krążków między from i to.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_Hanoi-instance_method" title="#print_Hanoi (instance method)">#<strong>print_Hanoi</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Funkcja drukująca aktualną wieżę hanoi.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#solve-instance_method" title="#solve (instance method)">#<strong>solve</strong>  &#x21d2; void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Metoda rozwiązująca problem wieży hanoi z wizualizacją.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(n)  &#x21d2; <tt><span class='object_link'><a href="" title="Hanoi (class)">Hanoi</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Konstruktor pobierający od użytkownika n i na podstawie tego tworzący warunki początkowe problemu.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>n</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>liczba klocków do zainicjowania</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/hanoi.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span>
+  <span class='ivar'>@n</span> <span class='op'>=</span> <span class='id identifier rubyid_n'>n</span>
+  <span class='ivar'>@rod_A</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_n'>n</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>-</span> <span class='id identifier rubyid_i'>i</span> <span class='rbrace'>}</span>
+  <span class='ivar'>@rod_B</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@rod_C</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="move_disk-instance_method">
+  
+    #<strong>move_disk</strong>(from, to)  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Funkcja wykonująca przenoszenie krążków między from i to. Jeśli źrodło jest puste lub ma większy krążek od docelowego to transakcja następuje odwrotnie.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>from</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>pierwszy słupek (domyślnie źrodłowy)</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>to</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Integer&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>drugi słupek (domyślnie docelowy)</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/hanoi.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_move_disk'>move_disk</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>  <span class='comment'># ważne, bo przez to w testach występował błąd (zamiast .empty było [nil])
+</span>      <span class='kw'>return</span>      <span class='comment'># pomimo faktu że nie zmieniało to w żaden sposób pożądanego wyniku
+</span>    <span class='kw'>end</span>
+    <span class='id identifier rubyid_disk'>disk</span> <span class='op'>=</span> <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+    <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_disk'>disk</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_disk'>disk</span> <span class='op'>=</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+    <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_disk'>disk</span><span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+    <span class='id identifier rubyid_disk'>disk</span> <span class='op'>=</span> <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+    <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_disk'>disk</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_disk'>disk</span> <span class='op'>=</span> <span class='id identifier rubyid_to'>to</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+    <span class='id identifier rubyid_from'>from</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_disk'>disk</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_Hanoi-instance_method">
+  
+    #<strong>print_Hanoi</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Funkcja drukująca aktualną wieżę hanoi. area - obszar każdego słupka, czyli szerokość największego globalnego krążka height - wysokość płótna, czyli suma wszystkich krążków plus jeden rods - lista słupków roof - zakropkowany sufit i podłoga danego rysunku</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/hanoi.rb', line 97</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_Hanoi'>print_Hanoi</span>
+  <span class='id identifier rubyid_rods'>rods</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@rod_A</span><span class='comma'>,</span> <span class='ivar'>@rod_B</span><span class='comma'>,</span> <span class='ivar'>@rod_C</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_area'>area</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='ivar'>@rod_A</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span> <span class='op'>||</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@rod_B</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span> <span class='op'>||</span> <span class='int'>0</span><span class='comma'>,</span> <span class='ivar'>@rod_C</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span> <span class='op'>||</span> <span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span>
+  <span class='id identifier rubyid_height'>height</span> <span class='op'>=</span> <span class='ivar'>@rod_A</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>+</span> <span class='ivar'>@rod_B</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>+</span> <span class='ivar'>@rod_C</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>+</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_roof'>roof</span> <span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='lparen'>(</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='id identifier rubyid_area'>area</span><span class='op'>+</span><span class='int'>2</span><span class='rparen'>)</span><span class='op'>*</span><span class='int'>3</span><span class='rparen'>)</span><span class='op'>+</span><span class='int'>6</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_roof'>roof</span>
+
+  <span class='comment'># Dla każdego wiersza tworzy tablicę stringów &#39;canvas&#39;, która zawiera trzy
+</span>  <span class='comment'># stringi kolejno odpowiadającę za słupki A, B i C.
+</span>  <span class='comment'># Na podstawie wielkości znajdującego się na danej wysokości klocka na słupku oblicza
+</span>  <span class='comment'># ilość znaków w stringu odpowiadających za lewy i prawy padding, klocek &quot;=&quot;, oraz słupek &quot;|&quot;.
+</span>  <span class='comment'># Po skończeniu wiersza drukuje canvas ze ścianami &quot;:&quot; po bokach, a na sam koniec drukuje podłogę.
+</span>  <span class='id identifier rubyid_height'>height</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_row'>row</span> <span class='op'>=</span> <span class='id identifier rubyid_height'>height</span> <span class='op'>-</span> <span class='int'>1</span> <span class='op'>-</span> <span class='id identifier rubyid_i'>i</span>
+    <span class='id identifier rubyid_canvas'>canvas</span> <span class='op'>=</span> <span class='id identifier rubyid_rods'>rods</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rod'>rod</span><span class='op'>|</span>
+      <span class='id identifier rubyid_block'>block</span> <span class='op'>=</span> <span class='id identifier rubyid_rod'>rod</span><span class='lbracket'>[</span><span class='id identifier rubyid_row'>row</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='int'>1</span>
+      <span class='id identifier rubyid_total_spaces'>total_spaces</span> <span class='op'>=</span> <span class='id identifier rubyid_area'>area</span> <span class='op'>-</span> <span class='id identifier rubyid_block'>block</span>
+      <span class='id identifier rubyid_left_space'>left_space</span> <span class='op'>=</span> <span class='id identifier rubyid_total_spaces'>total_spaces</span> <span class='op'>/</span> <span class='int'>2</span>
+      <span class='id identifier rubyid_right_space'>right_space</span> <span class='op'>=</span> <span class='id identifier rubyid_total_spaces'>total_spaces</span> <span class='op'>-</span> <span class='id identifier rubyid_left_space'>left_space</span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_rod'>rod</span><span class='lbracket'>[</span><span class='id identifier rubyid_row'>row</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_left_space'>left_space</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>|</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_right_space'>right_space</span>
+      <span class='kw'>else</span>
+        <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_left_space'>left_space</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>=</span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_block'>block</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='id identifier rubyid_right_space'>right_space</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>   </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>:  </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_canvas'>canvas</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>  :</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_roof'>roof</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="solve-instance_method">
+  
+    #<strong>solve</strong>  &#x21d2; <tt>void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p class="note returns_void">This method returns an undefined value.</p>
+<p>Metoda rozwiązująca problem wieży hanoi z wizualizacją</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/hanoi.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_solve'>solve</span>
+  <span class='id identifier rubyid_moves'>moves</span> <span class='op'>=</span> <span class='int'>2</span><span class='op'>**</span><span class='ivar'>@n</span>
+
+  <span class='comment'># Referencje do słupków, żeby w wypadku swapowania nie zmienić
+</span>  <span class='comment'># rzeczywistej kolejności słupków (co by popsuło drukowanie)
+</span>  <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='ivar'>@rod_A</span>
+  <span class='id identifier rubyid_auxiliary'>auxiliary</span> <span class='op'>=</span> <span class='ivar'>@rod_B</span>
+  <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='ivar'>@rod_C</span>
+
+  <span class='comment'># Jeśli ilość krążków do przełożenia jest parzysta to algorytm
+</span>  <span class='comment'># działa odwrotnie względem pomocniczego i docelowego słupka
+</span>  <span class='kw'>if</span> <span class='ivar'>@n</span><span class='period'>.</span><span class='id identifier rubyid_even?'>even?</span>
+    <span class='id identifier rubyid_auxiliary'>auxiliary</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span> <span class='op'>=</span> <span class='id identifier rubyid_target'>target</span><span class='comma'>,</span> <span class='id identifier rubyid_auxiliary'>auxiliary</span>
+  <span class='kw'>end</span>
+  
+  <span class='comment'># Pętla wykonująca algorytm przekładania krążków w 3 powtarzalnych krokach
+</span>  <span class='comment'># 1 krok - przeniesienie krążków między źrodłem i celem
+</span>  <span class='comment'># 2 krok - między źródłem i pomocnikiem
+</span>  <span class='comment'># 3 krok - między pomocnikiem i celem 
+</span>  <span class='id identifier rubyid_moves'>moves</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>
+    <span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nKROK </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>case</span>
+    <span class='kw'>when</span> <span class='ivar'>@n</span> <span class='op'>&lt;</span> <span class='int'>6</span>     <span class='comment'># animacja, której FPS zależy od liczby klocków do przestawienia 
+</span>      <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='float'>0.1</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='ivar'>@n</span> <span class='op'>&lt;</span> <span class='int'>8</span>
+      <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='float'>0.05</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='ivar'>@n</span> <span class='op'>&lt;</span> <span class='int'>10</span>
+      <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='float'>0.01</span><span class='rparen'>)</span>
+    <span class='kw'>when</span> <span class='ivar'>@n</span> <span class='op'>&lt;</span> <span class='int'>12</span>
+      <span class='id identifier rubyid_sleep'>sleep</span><span class='lparen'>(</span><span class='float'>0.005</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_system'>system</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>clear</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_print_Hanoi'>print_Hanoi</span>
+    <span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span> <span class='op'>=</span> <span class='kw'>case</span> <span class='id identifier rubyid_i'>i</span> <span class='op'>%</span> <span class='int'>3</span>
+      <span class='kw'>when</span> <span class='int'>0</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rbracket'>]</span>
+      <span class='kw'>when</span> <span class='int'>1</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_auxiliary'>auxiliary</span><span class='rbracket'>]</span>
+      <span class='kw'>when</span> <span class='int'>2</span> <span class='kw'>then</span> <span class='lbracket'>[</span><span class='id identifier rubyid_auxiliary'>auxiliary</span><span class='comma'>,</span> <span class='id identifier rubyid_target'>target</span><span class='rbracket'>]</span>
+      <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_move_disk'>move_disk</span><span class='lparen'>(</span><span class='id identifier rubyid_from'>from</span><span class='comma'>,</span> <span class='id identifier rubyid_to'>to</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Tue Aug  6 11:46:08 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.4).
+</div>
+
+    </div>
+  </body>
+</html>

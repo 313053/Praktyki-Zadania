@@ -1,23 +1,30 @@
+# klasa odpowiadająca za funkcjonalność wieży hanoi 
 class Hanoi
 
-  # pobiera od użytkownika n i na podstawie tego tworzy warunki początkowe problemu
+  # Konstruktor pobierający od użytkownika n i na podstawie tego
+  # tworzący warunki początkowe problemu.
+  #
+  # @param [Integer] n - liczba klocków do zainicjowania
+  # @return [Hanoi] nowa instancja klasy Hanoi
   def initialize(n)
     @n = n
-    @rodA = Array.new(n) { |i| n - i }
-    @rodB = []
-    @rodC = []
+    @rod_A = Array.new(n) { |i| n - i }
+    @rod_B = []
+    @rod_C = []
   end
 
-  # n - ilość krążków do przełożenia
-  # rodA,rodB,C listy odpowiadające za kolejno słupek źródłowy, bufor, oraz docelowy
+
+  # Metoda rozwiązująca problem wieży hanoi z wizualizacją
+  # 
+  # @return [void]
   def solve
     moves = 2**@n
 
     # Referencje do słupków, żeby w wypadku swapowania nie zmienić
     # rzeczywistej kolejności słupków (co by popsuło drukowanie)
-    source = @rodA
-    auxiliary = @rodB
-    target = @rodC
+    source = @rod_A
+    auxiliary = @rod_B
+    target = @rod_C
 
     # Jeśli ilość krążków do przełożenia jest parzysta to algorytm
     # działa odwrotnie względem pomocniczego i docelowego słupka
@@ -31,22 +38,37 @@ class Hanoi
     # 3 krok - między pomocnikiem i celem 
     moves.times do |i|
       puts "\nKROK #{i}"
-      self.printHanoi
+      case
+      when @n < 6     # animacja, której FPS zależy od liczby klocków do przestawienia 
+        sleep(0.1)
+      when @n < 8
+        sleep(0.05)
+      when @n < 10
+        sleep(0.01)
+      when @n < 12
+        sleep(0.005)
+      end
+      system("clear")
+      self.print_Hanoi
       from, to = case i % 3
         when 0 then [source, target]
         when 1 then [source, auxiliary]
         when 2 then [auxiliary, target]
         end
 
-      moveDisk(from, to)
+      move_disk(from, to)
     end
   end
 
   # Funkcja wykonująca przenoszenie krążków między from i to.
   # Jeśli źrodło jest puste lub ma większy krążek od docelowego
   # to transakcja następuje odwrotnie.
-  private
-  def moveDisk(from, to)
+  #
+  # @param [Array<Integer>] from - pierwszy słupek (domyślnie źrodłowy)
+  # @param [Array<Integer>] to - drugi słupek (domyślnie docelowy)
+  #
+  # @return [void]
+  def move_disk(from, to)
     if from.empty?
       if to.empty?  # ważne, bo przez to w testach występował błąd (zamiast .empty było [nil])
         return      # pomimo faktu że nie zmieniało to w żaden sposób pożądanego wyniku
@@ -70,11 +92,12 @@ class Hanoi
   # height - wysokość płótna, czyli suma wszystkich krążków plus jeden
   # rods - lista słupków
   # roof - zakropkowany sufit i podłoga danego rysunku
-  private
-  def printHanoi
-    rods = [@rodA, @rodB, @rodC]
-    area = [@rodA.max || 0, @rodB.max || 0, @rodC.max || 0].max
-    height = @rodA.size + @rodB.size + @rodC.size + 1
+  #
+  # @return [void]
+  def print_Hanoi
+    rods = [@rod_A, @rod_B, @rod_C]
+    area = [@rod_A.max || 0, @rod_B.max || 0, @rod_C.max || 0].max
+    height = @rod_A.size + @rod_B.size + @rod_C.size + 1
     roof ="." * (((area+2)*3)+6)
 
     puts roof
@@ -88,13 +111,13 @@ class Hanoi
       row = height - 1 - i
       canvas = rods.map do |rod|
         block = rod[row] || 1
-        totalSpaces = area - block
-        leftSpace = totalSpaces / 2
-        rightSpace = totalSpaces - leftSpace
+        total_spaces = area - block
+        left_space = total_spaces / 2
+        right_space = total_spaces - left_space
         if rod[row].nil?
-          " " * leftSpace + "|" + " " * rightSpace
+          " " * left_space + "|" + " " * right_space
         else
-          " " * leftSpace + "=" * block + " " * rightSpace
+          " " * left_space + "=" * block + " " * right_space
         end
       end.join("   ")
       puts ":  " + canvas + "  :"

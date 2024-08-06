@@ -1,0 +1,4 @@
+main.rb 2de2f39b21207f46d8913a70c88b9c14e750668e
+lib/hanoi.rb 88773aeeeba9b76edc4a2fd5331855da4858f093
+spec/hanoi_spec.rb 30dfd81ab2a3fb3daefeaab99666b0e79f9b3bc0
+spec/spec_helper.rb 175c6f0b2a8f3adef1bc3a56c72d8aa90b5c8b8c
