@@ -4,6 +4,8 @@
 
 ### INSTRUKCJA
 
+Aby uruchomić program wystarczy będąc w katalogu hanoi wpisać komendę "ruby main.rb" z argumentem, lub bez.
+
 Skrypt pobiera dane od użytkownika na dwa możliwe sposoby:
 
 1) Jako argument przy wywoływaniu funkcji (np "ruby main.rb 10")
@@ -16,4 +18,4 @@ Jeśli użytkownik nie poda argumentu przy wywołaniu skryptu, to automatycznie 
 ### TESTY
 
 W rspecu zrobiony jest także jeden test sprawdzający poprawne działanie głównego algorytmu Hanoi.solve.
-Aby rozpocząć test należy jedynie wpisać w konsoli "rspec" będąc w folderze hanoi
+Aby rozpocząć test należy jedynie wpisać w konsoli "rspec" będąc w folderze hanoi. Plik testu znajduje się w katalogu rspec.
