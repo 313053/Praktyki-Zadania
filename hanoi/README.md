@@ -1,6 +1,6 @@
 ### Zadanie 2: Wieża Hanoi
 
-<img src="https://github.com/313053/Praktyki-Zadania/tree/main/hanoi/screenshots/hanoi.png" alt="rozwiązanie hanoi" width="300">
+<img src="https://github.com/313053/Praktyki-Zadania/blob/main/hanoi/screenshots/hanoi.png" alt="rozwiązanie hanoi" width="300">
 
 ### INSTRUKCJA
 
