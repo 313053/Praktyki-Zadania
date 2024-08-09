@@ -16,7 +16,7 @@ class MainApp
     scraper = Scraper.new(brand, model, pages)
     scraped_data = scraper.scrape
     scraper.to_pdf(scraped_data)
-    #scraper.to_csv(scraped_data)
+    scraper.to_csv(scraped_data)
   end
 
   # Metoda do pobierania poszczegółnych inputów z konsoli, w przypadku 'pages',
