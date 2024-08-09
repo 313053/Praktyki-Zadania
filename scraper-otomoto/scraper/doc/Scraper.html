@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  Class: Scraper
+  
+    &mdash; Documentation by YARD 0.9.36
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "Scraper";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index (S)</a> &raquo;
+    
+    
+    <span class="title">Scraper</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><h1>Class: Scraper
+  
+  
+  
+</h1>
+<div class="box_info">
+  
+  <dl>
+    <dt>Inherits:</dt>
+    <dd>
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Scraper</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+    </dd>
+  </dl>
+  
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  <dl>
+    <dt>Defined in:</dt>
+    <dd>lib/scraper.rb</dd>
+  </dl>
+  
+</div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Klasa odpowiadająca za scrapera przy użyciu Nokogiri</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(brand, model, pages)  &#x21d2; Void </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Konstruktor scrapera.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scrape-instance_method" title="#scrape (instance method)">#<strong>scrape</strong>  &#x21d2; Array&lt;String&gt; </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Metoda odpowiadająca za funkcjonalność scrapera.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_csv-instance_method" title="#to_csv (instance method)">#<strong>to_csv</strong>(data_array)  &#x21d2; Void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Metoda odpowiedzialna za spakowanie zescrapowanych danych do pliku csv.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_html-instance_method" title="#to_html (instance method)">#<strong>to_html</strong>(data_array)  &#x21d2; String </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Metdoda odpowiedzialna za tworzenie HTMLa z zescrapowanych danych.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_pdf-instance_method" title="#to_pdf (instance method)">#<strong>to_pdf</strong>(data_array)  &#x21d2; Void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Metoda konwertująca zescrapowane dane do pdf używając wicked_pdf i metody to_html.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(brand, model, pages)  &#x21d2; <tt>Void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Konstruktor scrapera. W parametrach przyjmuje nazwę marki, modelu i liczbę stron do przeszukania, po czym formatuje nazwy i tworzy z nich adres podstrony w otomoto.pl</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>brand</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>nazwa marki samochodu</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>model</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>nazwa modelu samochodu</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>pages</span>
+      
+      
+        <span class='type'>(<tt>Integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>nazwa marki samochodu</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scraper.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_brand'>brand</span><span class='comma'>,</span> <span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_pages'>pages</span><span class='rparen'>)</span>
+  <span class='ivar'>@brand</span> <span class='op'>=</span> <span class='id identifier rubyid_brand'>brand</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_brand'>brand</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>:</span> <span class='id identifier rubyid_brand'>brand</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='ivar'>@model</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>:</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='ivar'>@pages</span> <span class='op'>=</span> <span class='id identifier rubyid_pages'>pages</span>
+  <span class='ivar'>@url</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://www.otomoto.pl/osobowe/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@brand</span><span class='embexpr_end'>}</span><span class='tstring_content'>/</span><span class='embexpr_beg'>#{</span><span class='ivar'>@model</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="scrape-instance_method">
+  
+    #<strong>scrape</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metoda odpowiadająca za funkcjonalność scrapera. Iteruje po podanej liczbie stron, pobierając z dynamicznie tworzonego linku stronę html, konwertując ją na dokument Nokogiri, pobierając z niego odpowiednie dane przy użyciu filtrów na bazie xpath, oraz dodając te dane do tablicy w odpowiednim formacie.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>zescrapowane dane</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scraper.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scrape'>scrape</span><span class='lparen'>(</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_final_array'>final_array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+
+  <span class='lparen'>(</span><span class='int'>1</span><span class='op'>..</span><span class='ivar'>@pages</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_page'>page</span><span class='op'>|</span>
+    <span class='id identifier rubyid_page_url'>page_url</span> <span class='op'>=</span> <span class='ivar'>@url</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>?page=</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_page'>page</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_html'>html</span> <span class='op'>=</span> <span class='const'>URI</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_page_url'>page_url</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span>
+    <span class='id identifier rubyid_noko_doc'>noko_doc</span> <span class='op'>=</span> <span class='const'>Nokogiri</span><span class='op'>::</span><span class='const'>HTML</span><span class='lparen'>(</span><span class='id identifier rubyid_html'>html</span><span class='rparen'>)</span>
+
+    <span class='comment'># Wyszukiwanie xpathem po lokacji, bo nazwy klas mogą się często zmieniać jeśli są generowane automatycznie
+</span>    <span class='id identifier rubyid_xpath_name'>xpath_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//article[@data-orientation=&#39;horizontal&#39;]//section//div[2]//h1</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_xpath_mileage'>xpath_mileage</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//article[@data-orientation=&#39;horizontal&#39;]//section//div[3]//dl[1]//dd[@data-parameter=&#39;mileage&#39;]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_xpath_fuel'>xpath_fuel</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//article[@data-orientation=&#39;horizontal&#39;]//section//div[3]//dl[1]//dd[@data-parameter=&#39;fuel_type&#39;]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_xpath_gearbox'>xpath_gearbox</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//article[@data-orientation=&#39;horizontal&#39;]//section//div[3]//dl[1]//dd[@data-parameter=&#39;gearbox&#39;]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_xpath_year'>xpath_year</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//article[@data-orientation=&#39;horizontal&#39;]//section//div[3]//dl[1]//dd[@data-parameter=&#39;year&#39;]</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_xpath_photo'>xpath_photo</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>//article[@data-orientation=&#39;horizontal&#39;]//section//div[1]//img</span><span class='tstring_end'>&quot;</span></span>
+
+    <span class='id identifier rubyid_noko_doc'>noko_doc</span><span class='period'>.</span><span class='id identifier rubyid_xpath'>xpath</span><span class='lparen'>(</span><span class='id identifier rubyid_xpath_name'>xpath_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_element'>element</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+      <span class='id identifier rubyid_temp_array'>temp_array</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_element'>element</span> <span class='op'>=</span> <span class='id identifier rubyid_element'>element</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+      <span class='id identifier rubyid_temp_array'>temp_array</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@brand</span>
+      <span class='id identifier rubyid_temp_array'>temp_array</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_element'>element</span><span class='lbracket'>[</span><span class='ivar'>@brand</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>+</span> <span class='int'>1</span><span class='op'>..</span><span class='rbracket'>]</span>
+      <span class='lbracket'>[</span><span class='id identifier rubyid_xpath_mileage'>xpath_mileage</span><span class='comma'>,</span> <span class='id identifier rubyid_xpath_fuel'>xpath_fuel</span><span class='comma'>,</span> <span class='id identifier rubyid_xpath_gearbox'>xpath_gearbox</span><span class='comma'>,</span> <span class='id identifier rubyid_xpath_year'>xpath_year</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_parameter'>parameter</span><span class='op'>|</span>
+        <span class='id identifier rubyid_temp_array'>temp_array</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_noko_doc'>noko_doc</span><span class='period'>.</span><span class='id identifier rubyid_xpath'>xpath</span><span class='lparen'>(</span><span class='id identifier rubyid_parameter'>parameter</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_text'>text</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_temp_array'>temp_array</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_noko_doc'>noko_doc</span><span class='period'>.</span><span class='id identifier rubyid_xpath'>xpath</span><span class='lparen'>(</span><span class='id identifier rubyid_xpath_photo'>xpath_photo</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>src</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+
+      <span class='id identifier rubyid_final_array'>final_array</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_temp_array'>temp_array</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_final_array'>final_array</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_csv-instance_method">
+  
+    #<strong>to_csv</strong>(data_array)  &#x21d2; <tt>Void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metoda odpowiedzialna za spakowanie zescrapowanych danych do pliku csv</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data_array</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Array&lt;String&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>tablica 2D wszystkich danych zescrapowanych ze strony</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scraper.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_csv'>to_csv</span><span class='lparen'>(</span><span class='id identifier rubyid_data_array'>data_array</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>output/otomoto.csv</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_csv_options'>csv_options</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>col_sep:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>write_headers:</span> <span class='kw'>true</span><span class='comma'>,</span>
+                  <span class='label'>headers:</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Marka</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Model</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Przebieg</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Rodzaj Paliwa</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Skrzynia Biegów</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Rok Produkcji</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Zdjęcie</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>force_quotes:</span> <span class='kw'>true</span> <span class='rbrace'>}</span>
+
+  <span class='const'>CSV</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>w</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='op'>**</span><span class='id identifier rubyid_csv_options'>csv_options</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_csv'>csv</span><span class='op'>|</span>
+    <span class='id identifier rubyid_data_array'>data_array</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
+      <span class='id identifier rubyid_csv'>csv</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_line'>line</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_html-instance_method">
+  
+    #<strong>to_html</strong>(data_array)  &#x21d2; <tt>String</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metdoda odpowiedzialna za tworzenie HTMLa z zescrapowanych danych. Dane dodawane są z tablicy w div’ach.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data_array</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Array&lt;String&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>tablica wszystkich danych zescrapowanych ze strony</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>zwraca string zawierający utworzony HTML</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scraper.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_html'>to_html</span><span class='lparen'>(</span><span class='id identifier rubyid_data_array'>data_array</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>=</span> <span class='heredoc_beg'>&lt;&lt;-HTML</span>
+<span class='tstring_content'>    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Test PDF&lt;/title&gt;
+      &lt;style&gt;
+        body {
+          background-image: url(&#39;https://raw.githubusercontent.com/313053/Praktyki-Zadania/main/assets/watermark2.png&#39;);
+          background-repeat: repeat;
+          background-position: relative;
+          background-size: cover;
+          width: 210mm;
+          height: 297mm;
+          margin: 0;
+          padding: 0;
+        }
+        .formatted {
+          font-family: monospace;
+          font-size: 22px;
+          white-space: pre;
+          display: flex;
+          align-items: center;
+          margin: 10px 0;
+          tab-size: 8;
+        }
+        .image-container {
+          width: 160px;
+          height: 120px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+          position: relative;
+        }
+        .image-container img {
+          max-width: 120%;
+          max-height: 90%;
+          object-fit: cover;</span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='embexpr_end'>}</span><span class='tstring_content'>
+        }
+      &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+</span><span class='heredoc_end'>  HTML
+</span>
+  <span class='id identifier rubyid_data_array'>data_array</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid__element'>_element</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+    <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>    &lt;div class=&quot;formatted&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='id identifier rubyid_data_array'>data_array</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>...</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+    <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;div class=&quot;image-container&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;img src=\&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_data_array'>data_array</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='embexpr_end'>}</span><span class='tstring_content'>\&quot; alt=\&quot;zdjęcie samochodu\&quot;&gt;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;/div&gt;\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
+
+  <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>+=</span> <span class='heredoc_beg'>&lt;&lt;-HTML</span>
+<span class='tstring_content'>      &lt;/body&gt;
+      &lt;/html&gt;
+</span><span class='heredoc_end'>  HTML
+</span>
+  <span class='id identifier rubyid_html_content'>html_content</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_pdf-instance_method">
+  
+    #<strong>to_pdf</strong>(data_array)  &#x21d2; <tt>Void</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Metoda konwertująca zescrapowane dane do pdf używając wicked_pdf i metody to_html</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>data_array</span>
+      
+      
+        <span class='type'>(<tt>Array&lt;Array&lt;String&gt;&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul><li>
+<p>tablica wszystkich danych zescrapowanych ze strony</p>
+</li></ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/scraper.rb', line 154</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_pdf'>to_pdf</span><span class='lparen'>(</span><span class='id identifier rubyid_data_array'>data_array</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>output/otomoto.pdf</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_html_content'>html_content</span> <span class='op'>=</span> <span class='id identifier rubyid_to_html'>to_html</span><span class='lparen'>(</span><span class='id identifier rubyid_data_array'>data_array</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_pdf'>pdf</span> <span class='op'>=</span> <span class='const'>WickedPdf</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='id identifier rubyid_pdf_file'>pdf_file</span> <span class='op'>=</span> <span class='id identifier rubyid_pdf'>pdf</span><span class='period'>.</span><span class='id identifier rubyid_pdf_from_string'>pdf_from_string</span><span class='lparen'>(</span><span class='id identifier rubyid_html_content'>html_content</span><span class='rparen'>)</span>
+
+  <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>w</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
+    <span class='id identifier rubyid_file'>file</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_pdf_file'>pdf_file</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+      <div id="footer">
+  Generated on Fri Aug  9 10:04:12 2024 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.36 (ruby-3.3.4).
+</div>
+
+    </div>
+  </body>
+</html>
