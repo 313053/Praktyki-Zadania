@@ -11,8 +11,10 @@ require 'wicked_pdf'
 class Scraper
 
   # Konstruktor, który automatycznie pobiera opdowiednie adresy i pola do przesukiwania z plików w folderze 'assets'
-  def initialize()
-    @links = File.readlines('assets/links.txt', chomp: true)
+  #
+  # @param [String] link_file - lokalne url pliku z adresami stron do przeszukania
+  def initialize(link_file)
+    @links = File.readlines(link_file, chomp: true)
     @fields = File.read('assets/fields.txt',  encoding: 'UTF-8').split(',')
   end
 
@@ -63,15 +65,17 @@ class Scraper
 
   # Metoda do scrapowania wszystkich aut i wrzucania na bierząco do pliku CSV
   #
+  # @param [String] filename - nazwa utworzonego pliku csv
+  #
   # @return [Void]
-  def scrape_all()
+  def scrape_all(filename)
     final_array = []
     progress = 0
     max_percentage = -1
     mutex = Mutex.new
 
     # Otwiera plik csv i tworzy pulę wątków
-    CSV.open('output/dane_aut.csv', 'w', col_sep: ',', write_headers: true, headers: @fields, force_quotes: true, encoding: 'UTF-8') do |csv|
+    CSV.open("output/#{filename}", 'w', col_sep: ',', write_headers: true, headers: @fields, force_quotes: true, encoding: 'UTF-8') do |csv|
       pool = Concurrent::FixedThreadPool.new(50)
       
       # Dla każdego adresu url skrapuje stronę osobnym wątkiem i przy użyciu mutexu wrzuca wyniki do csv
