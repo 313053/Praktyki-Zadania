@@ -1,0 +1,27 @@
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1q2w3e4r5t6y7u8i9o0p 
+      POSTGRES_DB: mydatabase
+  web:
+    build: .
+    volumes:
+    - ./zadanie:/home/hosting/zadanie
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://postgres:1q2w3e4r5t6y7u8i9o0p@db:5432/mydatabase
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: 1q2w3e4r5t6y7u8i9o0p 
+      DATABASE_DB: mydatabase
+    tty: true
+
+volumes:
+  postgres_data:
